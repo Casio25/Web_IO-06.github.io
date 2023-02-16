@@ -16,10 +16,10 @@ ul {
 }
 
 .menu {
-    padding-left: 5%;
-    padding-top: 1em;
-    line-height: 50px;
-    
+    padding-left: 10%;
+    float: left;
+    width: 20%;    
+
 }
 
 .item {
@@ -32,4 +32,26 @@ ul {
     margin: 10px 20px;
     padding: 10px;
     font-size: large;
+}
+
+.execution {
+    line-height: 25px;
+    margin-top: 2em;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+}
+.output {
+    margin-top: 10px;
+    float: right;
+    width: 65%;
+}
+
+.adjust {
+    padding: 1em;
+    border-style: solid;
+    border-width: thin;
+    margin-right: 30%;
+    font-size:larger;
 }

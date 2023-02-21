@@ -1,4 +1,14 @@
-.labs {
+* {
+    margin: 0;
+}
+.team {
+    margin-top: 1%;
+}
+
+.lab_list {
+    margin-top: 2%;
+}
+.lab {
     display: inline-block;
     color: black;
     text-decoration: none;
@@ -8,6 +18,11 @@
     margin: 10px 20px;
     padding: 1em;
     font-size: medium;
+}
+
+#selected {
+    background-color: black;
+    color: white;
 }
 
 .menu {
@@ -58,4 +73,8 @@
 
 .problem {
     padding-left: 30px;
+}
+
+.selectors {
+    list-style: none;
 }

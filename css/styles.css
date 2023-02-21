@@ -10,12 +10,8 @@
     font-size: medium;
 }
 
-
-ul {
-    list-style: none;
-}
-
 .menu {
+    list-style: none;
     padding-left: 10%;
     float: left;
     width: 20%;    
@@ -54,4 +50,12 @@ ul {
     border-width: thin;
     margin-right: 30%;
     font-size:larger;
+}
+
+.problem, .functions, .requirements {
+    margin: 0;
+}
+
+.problem {
+    padding-left: 30px;
 }

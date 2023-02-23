@@ -79,3 +79,7 @@
 .selectors {
     list-style: none;
 }
+
+xmp {
+    overflow: scroll;
+}

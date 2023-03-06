@@ -49,32 +49,87 @@
         </ul>
         <div class="output">
             <div class="adjust">
-                <xmp>button {
-position: sticky;
-left: 1000px;
-box-sizing: border-box;
-max-width: 100px;
-height: 60px;
-max-height: 60px;
-margin: 20px 10px 0;
-font-family: -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
-Ubuntu, sans-serif;
-font-size: 100%;
-line-height: 1.15;
-color: #fff;
-cursor: pointer;
-background-color: #405cf5;
-border-width: 0;
-border-radius: 6px;
-outline: none;
-box-shadow: rgb(50 50 93 / 10%) 0 0 0 1px inset,
-rgb(50 50 93 / 10%) 0 2px 5px 0, rgb(0 0 0 / 7%) 0 1px 1px 0;
-appearance: button;
-backface-visibility: hidden;
+                <table id="students">
+                    <tr>
+                      <th>Група</th>
+                      <th>Студент</th>
+                      <th>Контакт</th>
+                    </tr>
+                    <tr>
+                      <td>ІО-06</td>
+                      <td>Коломієць М.</td>
+                      <td>mishakolomiets</td>
+                    </tr>
+                    <tr>
+                      <td>ІО-06</td>
+                      <td>Корсун Б.</td>
+                      <td>voviskarikk</td>
+                    </tr>
+                    <tr>
+                      <td>ІО-06</td>
+                      <td>Користін О.</td>
+                      <td>okorystin</td>
+                    </tr>
+                </table><br>
+                <xmp>#students {
+    font-family: -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Ubuntu, sans-serif;
+    font-size: 85%;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    outline-style: double;
 }
+
+#students th {
+    padding: 10px 10px 10px 10px;
+    background-color: #006faf;
+    color: white;
+}
+                    
+#students td, #students th {
+    border: 2px solid #e2e2e2;
+    padding: 10px;
+}
+                      
+#students tr:nth-child(odd){
+    background-color: #cfcfcf;
+}
+ 
+#students tr:hover {
+    background-color: #c7e2fc;
+}
+                </xmp>
+                <button type="button" id="search_button" >Дізнатись погоду</button>
+                <xmp>
+button {
+    position: sticky;
+    left: 1000px;
+    box-sizing: border-box;
+    max-width: 100px;
+    height: 60px;
+    max-height: 60px;
+    margin: 20px 10px 0;
+    font-family: -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Ubuntu, sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    color: #fff;
+    cursor: pointer;
+    background-color: #405cf5;
+    border-width: 0;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: rgb(50 50 93 / 10%) 0 0 0 1px inset,
+    rgb(50 50 93 / 10%) 0 2px 5px 0, rgb(0 0 0 / 7%) 0 1px 1px 0;
+    appearance: button;
+    backface-visibility: hidden;
+}
+
 button:hover{
-background-color: #354dd2;
-}</xmp>
+    background-color: #354dd2;
+}               
+                </xmp>
             </div>
         </div>
     </div>

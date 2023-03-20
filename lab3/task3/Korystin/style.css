@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+}
+.header {
+    background-color: rgb(243, 241, 241);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 70px;
+    padding-top: 10px;
+}
+.header1 {
+    display: flex;
+}
+h2 {
+    color: dodgerblue;
+}
+h4 {
+    color: rgb(2, 30, 122);
+}
+.header_buttons {
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.header_buttons>a {
+    background-color: rgb(75, 165, 255);
+    padding: 15px 40px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-underline-position: none;
+    font-weight: bold;
+}
+.main_container{
+    display: flex;
+    min-height:500px;
+    background-color: rgb(210, 208, 208);
+    justify-content: space-between;
+    padding: 10px;
+}
+.main_container_1, .main_container_2, .main_container_3{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    line-height: 1.5;
+    text-indent: 20px;
+    padding: 20px 15px;
+}
+
+.main_container_1{
+    background-color: rgb(75, 165, 255);
+    color: white;
+    justify-content: space-around;
+}
+.main_container_1>a{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: rgb(158, 207, 255);
+}
+.main_container_2{
+    background-color: orange;
+}
+.main_container_3{
+    background-color: rgb(189, 0, 0);
+    color: white;
+}
+.input{
+    align-self: center;
+    border-color: rgb(201, 200, 200);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 20px;
+}
+.courses{
+    display:flex;
+    line-height: 1.5;
+    font-size: large;
+    margin: 0px 10px;
+}
+.footer_buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer_buttons>a {
+    background-color: rgb(230, 230, 230);
+    padding: 20px 50px 20px 50px;
+    font-size: 20px;
+    color: rgb(37, 91, 172);
+    text-decoration: none;
+    text-underline-position: none;
+    font-weight: bold;
+}
+span{
+    font-weight: bold;
+}
+img {
+    vertical-align:sub;
+}

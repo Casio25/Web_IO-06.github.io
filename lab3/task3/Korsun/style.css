@@ -1,0 +1,20 @@
+.top-obj {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: #292929;
+  }
+  #top {
+    display: flex;
+    justify-content: space-between;
+  }
+  #city {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  #text-info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+ 

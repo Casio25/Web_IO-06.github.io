@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_IO-06</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/acc2505e0d.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0px 50px;
+            padding: 0;
+        }
+
+        header,
+        footer {
+            background-color: yellow;
+            display: block;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            font-size: 24px;
+        }
+
+        #body-container {
+            overflow: hidden;
+        }
+
+        #left {
+            background-color: rgb(73, 147, 250);
+            color: white;
+            width: 25%;
+            height: 100vh;
+            float: left;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+        }
+
+        #middle {
+            width: 50%;
+            height: 100vh;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 96px;
+        }
+
+        #right {
+            background-color: rgb(73, 147, 250);
+            color: white;
+            width: 25%;
+            height: 100vh;
+            float: right;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+        }
+        #left, #middle, #right{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>1</header>
+    <div id="body-container">
+        <div id="left">4</div>
+        <div id="middle">3</div>
+        <div id="right">5</div>
+    </div>
+    <footer>2</footer>
+</body>
+
+</html>

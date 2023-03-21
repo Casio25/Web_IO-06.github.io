@@ -49,7 +49,49 @@
         </ul>
         <div class="output">
             <div class="adjust">
+                <h4>Зовнішній вигляд макету розробленого у Figma</h4>
                 <img src="../images/layout.jpg" alt="layout" height="400px" width="740px">
+                <img src="../images/layout1.jpg" alt="layout1" height="400px" width="740px"><br>
+                <h4>HTML-код макету</h4>
+                <xmp class="code"><!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherCheck</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/acc2505e0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="header" align="center">
+        <div class="menu1">
+            <a class="home" href="index.html">WeatherCheck</a>
+            <div class="input_form">
+                <div id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="city_input" type="text" name="city" placeholder="Введіть назву міста">
+                </div>
+                <div class="buttons">
+                    <button class ="custom-button" type="button" id="search_button" >Дізнатись погоду</button>
+                    <button class ="custom-button" type="button" id="save_button">Зберегти дані</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu2">
+            <a class="today">Сьогодні</a>
+            <a class="history">Історія</a>
+    </div>
+    <div class="bg">
+            <div class="result" style="display:none;" align="center"></div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/7c0d568f8b.js" crossorigin="anonymous"></script>
+</body>
+                </xmp>
             </div>
         </div>
     </div>

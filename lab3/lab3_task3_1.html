@@ -60,7 +60,296 @@
         </ul>
         <div class="output">
             <div class="adjust">
-                <a href="./task3/Kolomiets/index.html" target="_blank">Коломієць Михайло - Варіант 8</a> 
+                <a href="./task3/Kolomiets/index.html" target="_blank">Коломієць Михайло - Варіант 8</a>
+                <h4><br>CSS-код сторінки розробленої за допомогою FLEXBOX</h4>
+                <xmp>
+.header-obj {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: #292929;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+}
+.info-text {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 35px 0;
+}
+.content {
+    margin: 15px auto;
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+}
+.school-img {
+    margin: 15px auto;
+    padding-top: 20px;
+    width: 700px;
+    height: 280px;
+}
+
+.content>h1 {
+    font-size: 40px;
+}
+
+.content>p {
+    font-size: 20px;
+}
+
+.info-text>img {
+    float: right;
+}
+.blue-text{
+    color: #41a0f3;
+}
+.feedback>h3 {
+    padding-top: 20px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.feedback>h2 {
+    text-transform: uppercase;
+    font-size: 42px;
+    color: #ff973b;
+    text-align: center;
+}
+
+.feedback>p {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    width: 65%;
+    margin: 30px auto;
+}
+.video-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 35px 0;
+}
+.compmanies {
+    margin: 0 auto;
+    width: 950px;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.company {
+    margin-right: 15px;
+    width: 195px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.company>img {
+    display: block;
+    margin: 0 auto;
+}
+.course {
+    background-color: #292929;
+}
+
+.course>h3 {
+    color: white;
+    padding-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.course>h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #ff973b;
+    text-align: center;
+}
+
+
+.good {
+    background-color: #212121;
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    margin-bottom: 10px;
+}
+
+.good>img {
+    display: block;
+    margin: 0 auto;
+}
+
+.good>h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+
+.good>h5 {
+    font-weight: 700;
+    color: #ff973b;
+    text-align: center;
+}
+
+.good>p {
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.good>span {
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+    color: #2c73b1;
+    text-align: center;
+}
+
+.good>a {
+    height: 50px;
+    line-height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+    color: white;
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.footer{
+    display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 35px;
+    }
+.footer-text{
+    background-color: black;
+    color: white;
+    padding: 50px;
+    padding-right: 200px;
+}
+.footer-logo{
+         background-color: black;
+         color:white;
+         font-size: 40px;
+         padding: 20px;
+}</xmp>
+                <h4><br>HTML-код сторінки розробленої за допомогою FLEXBOX</h4>
+                <xmp class="code">
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_IO-06</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/acc2505e0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <h3 class="header-obj">Форми навчання</h3>
+        <h3 class="header-obj">Заходи</h3>
+        <h3 class="header-obj">Про Академію</h3>
+        <h3 class="header-obj">Контакти</h3>
+        <h3 class="header-obj" id="city">Київ</h3>
+    </div>
+    <div class="info-text">
+        <div class="content">
+            <h1>КУРСИ ПРОГРАМУВАННЯ<span class="blue-text"><br>З 100% ГАРАНТІЄЮ</span> ПРАЦЕВЛАШТУВАННЯ</h1><br>
+            <p>з SCHOOL ти отримаєш високооплачувану роботу своє мрії.<br>
+                Ми готуємо висококласних ІТ-спеціалістів</p>
+        </div>
+        <div class="school-img">
+            <img src="img/school_img.png" alt="" width="100%">
+        </div>
+    </div>
+    <div class="feedback">
+        <h3>Відгуки від роботодавців</h3>
+        <h2>Підтвердена якість</h2>
+        <p>Школа програмування Okten - єдина, що має відгуки від роботодавців, які входять до списку найкращих компаній
+            DOU.UA . А випускники курсів з інкубатором отримують гарантії працевлаштування впродовж 6 місяців після
+            успішного закінчення навчання. Але зазвичай їх забирають до себе наші офіційні партнери ще до закінчення курсу.
+        </p>
+        <div class="video-block">
+            <img class="picture" width="540px" height="360px" src="img/16.PNG">
+            <div class="compmanies">
+                <a href="#" class="company"><img src="img/4.png" width="100%" height="100%" alt=""></a>
+                <a href="#" class="company"><img src="img/5.png" width="100%" height="100%" alt=""></a>
+                <a href="#" class="company"><img src="img/6.png" width="100%" height="100%" alt=""></a>
+                <a href="#" class="company"><img src="img/7.png" width="100%" height="100%" alt=""></a>
+                <a href="#" class="company"><img src="img/8.png" width="100%" height="100%" alt=""></a>
+                <a href="#" class="company"><img src="img/9.png" width="100%" height="100%" alt=""></a>
+                <a href="#" class="company"><img src="img/10.png" width="100%" height="100%" alt=""></a>
+                <a href="#" class="company"><img src="img/11.png" width="100%" height="100%" alt=""></a>
+            </div>
+        </div>
+        <div class="course">
+            <h3>ПОПУЛЯРНІ НАПРЯМКИ</h3>
+            <h2>КУРСІВ ПРОГРАМУВАННЯ</h2>
+            <div class="container">
+                <div class="good">
+                    <img src="img/13.png" width="100px" height="100px" alt="">
+                    <h4>javascript</h4>
+                    <h5>Комплексний курс</h5>
+                    <p>Стартовий рівень: початківець<br>
+                        Тривалість: 5-11 місяців<br>
+                        Ціна: від 14500грн.</p>
+                    <span>Залишилося 3 місця</span>
+                    <hr>
+                    <a href="#">Детальніше</a>
+                </div>
+        
+                <div class="good">
+                    <img src="img/14.png" width="100px" height="100px" alt="">
+                    <h4>java</h4>
+                    <h5>Комплексний курс</h5>
+                    <p>Стартовий рівень: початківець<br>
+                        Тривалість: 6-11 місяців<br>
+                        Ціна: від 14500грн.</p>
+                    <span>Залишилося 6 місць</span>
+                    <hr>
+                    <a href="#">Детальніше</a>
+                </div>
+        
+                <div class="good">
+                    <img src="img/15.png" width="100px" alt="" height="100px">
+                    <h4>python</h4>
+                    <h5>Комплексний курс</h5>
+                    <p>Стартовий рівень: початківець<br>
+                        Тривалість: 6-11 місяців<br>
+                        Ціна: від 14500грн.</p>
+                    <span>Залишилося 4 місця</span>
+                    <hr>
+                    <a href="#">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">@2023
+        </div>
+        <div class="footer-logo"><i class="fa-brands fa-square-youtube"></i></div>
+        <div class="footer-logo"><i class="fa-brands fa-square-facebook"></i></div>
+        <div class="footer-logo"><i class="fa-solid fa-paper-plane"></i></div>
+        <div class="footer-logo"><i class="fa-brands fa-square-instagram"></i></div>
+    </div>
+</body></xmp>
             </div>
         </div>
     </div>

@@ -60,7 +60,138 @@
         </ul>
         <div class="output">
             <div class="adjust">
-                <a href="./task3/Korsun/index.html" target="_blank">Корсун Богдан - Варіант 1</a> 
+                <a href="./task3/Korsun/index.html" target="_blank">Корсун Богдан - Варіант 1</a>
+                <h4><br>CSS-код сторінки розробленої за допомогою FLEXBOX</h4> 
+                <xmp>
+.top-obj {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: #292929;
+}
+#top {
+  display: flex;
+  justify-content: space-between;
+}
+#city {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+#text-info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}  
+                </xmp>
+                <h4><br>HTML-код сторінки розробленої за допомогою FLEXBOX</h4>
+                <xmp class="code">
+<!DOCTYPE html>
+<html>
+    <body style="background-color:rgb(226, 226, 226);"></body>
+<head>
+    <title>Lab3</title>
+  <style>
+    .top-obj{
+        width: 10%;
+    }
+    td {
+      width: 25%;
+      vertical-align: top;
+      padding: 10px;
+      border: 1px solid black;
+      background-color:rgb(255, 255, 255)
+    }
+    .column {
+      width: 50%;
+    }
+    .example {
+    text-align: center;
+    font-weight: 400;
+    font-stretch: expanded;
+    
+    }
+    .photo {
+      width: 25%;
+      display: block;
+      margin: 0 auto;
+    }
+    .main_container_1{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(226, 226, 226);
+    }
+    .image {
+      width: 40%;
+      float: left;
+      margin-right: 20px;
+    }
+    .text {
+      width: 55%;
+      float: left;
+    }
+    .font {
+    font-family: Garamond;
+}
+
+
+  </style>
+    <meta charset="UTF8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font">
+    <div id="top">
+    <h3 class="top-obj">Форми навчання</h3>
+    <h3 class="top-obj">Заходи</h3>
+    <h3 class="top-obj">Про Академію</h3>
+    <h3 class="top-obj">Контакти</h3>
+    <h3 class="top-obj" id="city">Київ</h3>
+</div>
+    <h3 class="example" ><b>Для кого розроблена програма</b></h3>
+<table>
+    <tr>
+      <td class="example"> 
+        <b>Школярі та випускники (15-18 років)</b><br><br> отримають першу професію, не відкладаючи на потім свою мрію стати програмістом.<br>
+        <img src="images/image1.png" alt="A photo" style="width:100%;">
+        </td>
+      <td class="example">
+        <img src="images/image2.png" alt="A photo" style="width:100%;">
+        <b>Студенти ВНЗ (18-23 роки)</b><br><br> освоять другу спеціальність паралельно з університетською освітою.<br>
+        </td>
+      <td class="example">
+        <b>Представники інших професій (23-55 років)</b><br><br> яких не влаштовує поточна кар'єрна і фінансова перспектива, зможуть перевчитися на розробника ПЗ і отримати затребувану професію.<br>
+        <img src="images/image3.png" alt="A photo" style="width:100%;">
+        </td>
+      <td class="example">
+        <img src="images/image4.png" alt="A photo" style="width:100%;">
+        <b>Всі бажаючі підвищити ІТ-кваліфікацію</b><br><br> систематизують свої знання і отримають робочі навички, затребувані сучасному ІТ.<br>
+        </td>
+    </tr>
+  </table>
+
+<br>
+    <h1 class="example"><b>Як проходить навчання</b></h1>
+<br>
+<div class="main_container_1" >
+    <img src="images/image5.png" alt="Photo 5" class="photo" width="300" height="300">
+    <img src="images/image6.png" alt="Photo 6" class="photo" width="300" height="300">
+    <img src="images/image7.png" alt="Photo 7" class="photo" width="300" height="300">
+  </div>
+
+<br>
+  <h2 class="example"><b>Партнери Академії</b></h2>
+
+  <div>
+    <img src="images/image8.png" alt="Photo 8" class="image">
+    <div class="text" style="font-size:20px":>
+        <h3>Luxoft</h3>
+        Luxoft - глобальна технологічна компанія,  одна із лідерів на ринку послуг цифрової трансформації та створення програмних продуктів. Luxoft пропонує індивідуальні ІТ-рішення, які заохочують до змін у бізнесах клієнтів у всьому світі.<br><br>
+        Luxoft об'єднує понад 13000 спеціалістів із 22 країн світу зі штаб-квартирою у м. Цуг, Швейцарія. Україна є однією з найпотужніших локацій в географії Luxoft. Близько 3500 фахівців усіх ключових напрямків зосереджені в офісах Києва, Одеси і Дніпра.</h4>
+        </div>
+    </div>
+
+</body>
+</html>  
+                </xmp>
             </div>
         </div>
     </div>

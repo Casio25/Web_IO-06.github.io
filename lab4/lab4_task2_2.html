@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_IO-06</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/acc2505e0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header align="center">
+        <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br> З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. <br> ОСНОВИ FRONTEND ТА BACKEND РОЗРОБОК"</h1>
+        <h2 class="team">БРИГАДА #7</h2>
+        <h3>Студенти: гр. ІО-06 Коломієць Михайло Юрійович,
+             гр. ІО-06 Корсун Богдан Олегович,
+             гр. ІО-06 Користін Олександр Олександрович
+        </h3>
+    </header>
+    <div class="lab_list" align="center">
+        <a class="lab" href="../lab1.html">Лабораторна <br>робота №1</a>
+        <a class="lab" href="../lab2.html">Лабораторна <br>робота №2</a>
+        <a class="lab" href="../lab3.html">Лабораторна <br>робота №3</a>
+        <a class="lab" href="../lab4.html" id="selected">Лабораторна <br>робота №4</a>
+        <a class="lab" href="../lab5.html">Лабораторна <br>робота №5</a>
+        <a class="lab" href="../lab6.html">Лабораторна <br>робота №6</a>
+        <a class="lab" href="../lab7.html">Лабораторна <br>робота №7</a>
+        <a class="lab" href="../lab8.html">Лабораторна <br>робота №8</a>
+        <a class="lab" href="../lab9.html">Лабораторна <br>робота №9</a>
+    </div>
+    <div class="execution"> 
+        <ul class="menu">
+            <li> 
+                <a class="item" href="./lab4_topic.html">Тема й мета. Місце розташування сайту</a>
+            </li>
+            <li>
+                <a class="item" href="./lab4_task1.html">ЗАВДАННЯ №1</a>
+            </li> 
+            <li> 
+                <a class="item" href="./lab4_task2.html" id="selected">ЗАВДАННЯ №2</a>
+                <ul class="selectors">
+                    <li>
+                        <a class="item" href="./lab4_task2_1.html">Коломієць</a>
+                    </li>
+                    <li>
+                        <a class="item" href="./lab4_task2_2.html" id="selected">Корсун</a>
+                    </li>
+                    <li>
+                        <a class="item" href="./lab4_task2_3.html">Користін</a> 
+                    </li>
+                </ul>
+            </li>
+            <li> 
+                <a class="item" href="./lab4_conclusion.html">Висновки</a>
+            </li>
+        </ul>
+        <div class="output">
+            <div class="adjust">
+                <h3 id="tasks">Варіант 1</h3><br>
+                <p id="tasks">Валідація HTML-форми
+                    реєстрації користувача</p><br>
+                <p id="tasks">   
+                    Забезпечити перевірку елементів HTML-форми
+                    таких видів: ціле число, дійсне число, дата у форматі
+                    DD.MM.YYYY, однаковість даних у полях введення
+                    паролю (основне та перевірочне). Крім того,
+                    забезпечити перевірку введення обов‘язкових полів,
+                    помічених (*).</p><br>
+                <h3 id="tasks">Результат виконання:</h3><br>
+                <form id="myForm" onsubmit="alert('Form submitted successfully!'); return validateForm();">
+                    <label for="naturalNumber">Natural Number*:</label>
+                    <input type="number" id="naturalNumber" name="naturalNumber" required><br>
+            
+                    <label for="floatNumber">Float Number*:</label>
+                    <input type="number" id="floatNumber" name="floatNumber" step="0.01" required><br>
+            
+                    <label for="password">Password*:</label>
+                    <input type="password" id="password" name="password" required><br>
+            
+                    <label for="confirmPassword">Confirm Password*:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+            
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required><br>
+            
+                    <input type="button" value="Submit" onclick="validateForm();">
+                </form><br>
+                <h3 id="tasks">HTML та JS код</h3>
+                <script type="text/javascript">
+                    function validateNaturalNumber(input) {
+                        if (isNaN(parseInt(input.value)) || !Number.isInteger(parseFloat(input.value)) || parseInt(input.value) <= 0) {
+                            alert('Please enter a natural number value.');
+                            input.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+            
+                    function validateFloat(input) {
+                        if (isNaN(parseFloat(input.value))) {
+                            alert('Please enter a valid float value.');
+                            input.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+            
+                    function validatePassword(input1, input2) {
+                        if (input1.value !== input2.value) {
+                            alert('Passwords do not match.');
+                            input1.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+            
+                    function validateRequired(input) {
+                        if (input.value.trim() === '') {
+                            alert('This field is required.');
+                            input.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+            
+                    function validateForm() {
+                        var form = document.getElementById('myForm');
+                        var isValid = true;
+                        var inputs = form.getElementsByTagName('input');
+                        for (var i = 0; i < inputs.length; i++) {
+                            if (inputs[i].type === 'date') {
+                                // skip over date input
+                                continue;
+                            }
+                            if (inputs[i].hasAttribute('required')) {
+                                isValid = validateRequired(inputs[i]) && isValid;
+                            }
+                            switch (inputs[i].type) {
+                                case 'number':
+                                    if (inputs[i].name === 'naturalNumber') {
+                                        isValid = validateNaturalNumber(inputs[i]) && isValid;
+                                    } else {
+                                        isValid = validateFloat(inputs[i]) && isValid;
+                                    }
+                                    break;
+                                case 'password':
+                                    if (inputs[i].name === 'confirmPassword') {
+                                        isValid = validatePassword(inputs[i - 1], inputs[i]) && isValid;
+                                    }
+                                    break;
+                                case 'text':
+                                    break;
+                                case 'button':
+                                    if (inputs[i].value === 'Submit') {
+                                        if (isValid) {
+                                            alert('Form submitted successfully!');
+                                        } else {
+                                            alert('Form contains errors. Please fix them before submitting.');
+                                        }
+                                        form.submit();
+                                    }
+                                    break;
+                                default:
+                                    alert('Unsupported input type: ' + inputs[i].type);
+                                    isValid = false;
+                                    break;
+                            }
+                        }
+                        return false; // prevent form from submitting twice
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>

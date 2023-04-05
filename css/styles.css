@@ -141,3 +141,7 @@ button:hover{
     background-color: #c7e2fc;
 }
   
+#tasks {
+    text-indent: 1.5em;
+    text-align: justify;
+}

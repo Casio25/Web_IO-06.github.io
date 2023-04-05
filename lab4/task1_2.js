@@ -12,7 +12,7 @@ function count() {
     let evenIndexArr = [];
     let evenArr = [];
     let randomArray = new Array(Number(inputValue.value)).fill(null).map(() => { return getRandom(inputValue.value); });
-    for (let i = 0; i < randomArray.length-1; i++){
+    for (let i = 0; i < randomArray.length; i++){
         if (i%2 == 0){
             evenIndexArr.push(randomArray[i])
         }

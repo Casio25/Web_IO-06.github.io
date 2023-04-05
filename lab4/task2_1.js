@@ -36,7 +36,7 @@ function startAlarm() {
         alert("Please set the alarm first.");
         return;
     }
-
+    startAlarmButton.removeEventListener('click', startAlarm)
     let now = new Date();
     let timeDiff = alarmTime.getTime() - now.getTime();
 
@@ -52,6 +52,8 @@ function startAlarm() {
 }
 
 function stopAlarm() {
+    setAlarmButton.addEventListener("click", setAlarm);
+    startAlarmButton.addEventListener("click", startAlarm);
     clearTimeout(alarmInterval);
 
 
@@ -70,3 +72,4 @@ function formatTime(date) {
     let time = hours + ":" + minutes + " " + ampm;
     return time;
 }
+

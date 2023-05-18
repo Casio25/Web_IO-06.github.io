@@ -1,0 +1,113 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Burger menu styles */
+.burger {
+    cursor: pointer;
+    display: block;
+    height: 2rem;
+    position: relative;
+    width: 2rem;
+}
+
+.burger span {
+    background-color: white;
+    display: block;
+    height: 0.2rem;
+    position: absolute;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.burger span:nth-child(1) {
+    top: 0;
+}
+
+.burger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger span:nth-child(3) {
+    bottom: 0;
+}
+
+.burger.open span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* Slider styles */
+#slider {
+    margin: 3rem auto;
+    width: 80%;
+}
+
+#slider-range {
+    background-color: #ddd;
+    height: 0.5rem;
+}
+
+.ui-slider-range {
+    background-color: #ff6600;
+}
+
+.ui-slider-handle {
+    background-color: white;
+    border: 2px solid #ff6600;
+    height: 1.5rem;
+    margin-top: -0.5rem;
+    width: 1.5rem;
+}

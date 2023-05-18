@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Include CSS styles for the informers -->
+    <style>
+        .weather-informer,
+        .clock-informer,
+        .currency-informer {
+            display: inline-block;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .weather-informer .location,
+        .currency-informer .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .weather-informer .temperature,
+        .clock-informer .time,
+        .currency-informer .rate {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .weather-informer .description,
+        .currency-informer .update {
+            color: #888;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Weather Informer -->
+    <div class="weather-informer" id="weather-informer">
+        Loading weather...
+    </div>
+
+    <!-- Clock Informer -->
+    <div class="clock-informer" id="clock-informer">
+        Loading time...
+    </div>
+
+    <!-- Currency Informer -->
+    <div class="currency-informer" id="currency-informer">
+        Loading currency...
+    </div>
+
+<script>
+    $(document).ready(function () {
+        // Weather API configuration
+        var weatherApiKey = '6a2460f385d8fbe77660e390eb988c73'; // OpenWeatherMap API key
+        var weatherCity = 'Kyiv';
+
+        // Currency API configuration
+        var currencyApiKey = 'JqhLq4ohxkJaCICuLhFCGkjycGnQMaWd'; // Currency API key
+        var currencyBase = 'USD';
+        var currencySymbols = 'EUR,GBP';
+
+        // Make a request to the weather API
+        $.getJSON('https://api.openweathermap.org/data/2.5/weather', {
+            q: weatherCity,
+            appid: weatherApiKey,
+            units: 'metric'
+        }).done(function (data) {
+            // Parse the weather data and update the informer
+            var weatherInformer = $('#weather-informer');
+            weatherInformer.empty();
+
+            var location = data.name + ', ' + data.sys.country;
+            var temperature = Math.round(data.main.temp) + '°C';
+            var description = data.weather[0].description;
+
+            weatherInformer.append('<div class="location">' + location + '</div>');
+            weatherInformer.append('<div class="temperature">' + temperature + '</div>');
+            weatherInformer.append('<div class="description">' + description + '</div>');
+        }).fail(function () {
+            // Display an error message if the weather data couldn't be retrieved
+            var weatherInformer = $('#weather-informer');
+            weatherInformer.text('Failed to fetch weather data.');
+        });
+
+        // Update the clock every second
+        setInterval(function () {
+            var clockInformer = $('#clock-informer');
+            var now = new Date();
+            var time = now.getHours() + ':' + ('0' + now.getMinutes()).slice(-2) + ':' + ('0' + now.getSeconds()).slice(-2);
+
+            clockInformer.text(time);
+        }, 1000);
+
+        // Make a request to the currency API
+        $.ajax({
+            url: 'https://v6.exchangeratesapi.io/latest',
+            method: 'GET',
+            headers: {
+                'apikey': 'JqhLq4ohxkJaCICuLhFCGkjycGnQMaWd'
+            },
+            data: {
+                base: currencyBase,
+                symbols: currencySymbols
+            },
+            success: function (currencyData) {
+                // Parse the currency data and update the informer
+                var currencyInformer = $('#currency-informer');
+                currencyInformer.empty();
+
+                var rates = currencyData.rates;
+                var html = '<div class="title">Currency Rates</div>';
+
+                $.each(rates, function (currency, rate) {
+                    html += '<div class="rate">' + currency + ': ' + rate.toFixed(2) + '</div>';
+                });
+
+                currencyInformer.append(html);
+            },
+            error: function () {
+                // Display an error message if the currency data couldn't be retrieved
+                var currencyInformer = $('#currency-informer');
+                currencyInformer.text('Failed to fetch currency data.');
+            }
+        });
+    });
+</script>
